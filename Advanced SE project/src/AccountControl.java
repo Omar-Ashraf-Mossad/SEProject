@@ -24,6 +24,9 @@ public class AccountControl {
 		if(list.check_exist(email, password))
 		{
 			User u = list.get_user(email);
+			UserConsole c = u.get_form();
+			c.start();
+			
 			return true;
 		}
 		return false;

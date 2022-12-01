@@ -42,13 +42,13 @@ public class UsersList {
 			list.add(u);
 		}
 		
-		public boolean check_exist(String email,String name)
+		public boolean check_exist(String email,String password)
 		{
 			User user;
 			for(int i=0;i<list.size();i++)
 			{
 				user = list.get(i);
-				if(user.compare_email(email)&&user.compare_name(name))
+				if(user.compare_email(email)&&user.compare_password(password))
 					return true;
 			}
 			return false;

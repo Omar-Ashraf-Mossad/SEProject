@@ -15,9 +15,9 @@ public class UserConsole {
 		{
 			System.out.println("-------------------------------");
 			System.out.println("User:" + user.get_name());
-			System.out.print("Balance = "+ user.get_balance());
+			System.out.println("Balance = "+ user.get_balance());
 			
-			System.out.print("Choose Your operation:" );
+			System.out.println("Choose Your operation:" );
 			
 			System.out.println("1-Search for a service");
 			System.out.println("2-Add funds to wallet");

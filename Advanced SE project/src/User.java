@@ -9,10 +9,13 @@ public class User {
 	{
 		name = n;
 		password = p;
-		email = p;
+		email = e;
 		balance = 0;
 	}
-	
+	UserConsole get_form()
+	{
+		return new UserConsole(this);
+	}
 	boolean compare_name(String n) {
 		return name.equals(n);
 	}
@@ -21,11 +24,18 @@ public class User {
 	{
 		return email.equals(e);
 	}
-
+	boolean compare_password(String p)
+	{
+		return password.equals(p);
+	}
 	
 	String get_name()
 	{
 		return name;
+	}
+	String get_password()
+	{
+		return password;
 	}
 	
 	String get_email()

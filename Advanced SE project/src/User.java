@@ -21,6 +21,7 @@ public class User {
 	{
 		return email.equals(e);
 	}
+
 	
 	String get_name()
 	{

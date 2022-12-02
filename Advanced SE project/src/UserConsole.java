@@ -32,10 +32,11 @@ public class UserConsole {
 		    
 		    switch(choice)
 		    {
-		    case(4): System.out.print("This operation is not ready yet");
+		    case(4): System.out.println("This operation is not ready yet");
+		    		break;
 		    case(5):flag = false;
 		    		break;
-		    default: System.out.print("Please enter a correct operation number");
+		    default: System.out.println("Please enter a correct operation number");
 		    }
 			
 			

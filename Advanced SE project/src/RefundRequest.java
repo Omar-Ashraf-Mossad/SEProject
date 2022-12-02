@@ -9,4 +9,7 @@ public class RefundRequest {
         this.transID = transID;
         this.SP = SP;
     }
+    public void print() {
+        System.out.println(username + " " + amount + " " + transID + " " + SP);
+    }
 }

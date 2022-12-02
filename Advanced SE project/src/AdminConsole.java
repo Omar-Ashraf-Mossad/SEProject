@@ -4,6 +4,10 @@ public class AdminConsole {
 	
 	 Scanner adminInput = new Scanner(System.in);
 	 
+	 public void ViewRefunds(){
+	        RefundsManagment.getRefundsList().print();
+	    }
+	 
 	 public void ViewOptions(int choice){
 	     switch(choice) {
 	         case 1 -> System.out.println("Operation 1");

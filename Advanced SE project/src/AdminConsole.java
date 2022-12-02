@@ -10,8 +10,11 @@ public class AdminConsole {
 	 
 	 public void ViewOptions(int choice){
 	     switch(choice) {
-	         case 1 -> System.out.println("Operation 1");
-	         case 2 -> System.out.println("Operation 2");
+	     case 1 -> {
+	            System.out.println("List of Refunds : ");
+	            ViewRefunds();
+	        }
+	     case 2 -> System.out.println("Operation 2");
 	     }
 
 	 }

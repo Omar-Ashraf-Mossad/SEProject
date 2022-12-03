@@ -4,6 +4,7 @@ public class User {
 	private String password;
 	private String email;
 	private double balance;
+	private boolean isnew = true;
 	
 	User(String n,String p,String e)
 	{
@@ -42,9 +43,23 @@ public class User {
 	{
 		return email;
 	}
+	void addbalance(double b)
+	{
+		balance = b;
+	}
+	
 	double get_balance()
 	{
 		return balance;
 	}
+	
+	boolean isNew () {
+		return isnew;
+	}
+	void changeNewState()
+	{
+		isnew = false;
+	}
+	
 	
 }

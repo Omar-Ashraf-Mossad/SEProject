@@ -1,10 +1,12 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainConsole {
 
 	public static void main(String[] args) {
+		
 		boolean flag = true;
-		AccountControl control = new AccountControl();
+		Isign control = new AccountControl();
 		
 		while(flag)
 		{
@@ -77,6 +79,8 @@ public class MainConsole {
 			
 			
 		}
+		
+		
 		
 	}
 

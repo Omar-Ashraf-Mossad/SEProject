@@ -1,5 +1,5 @@
 
-public class AccountControl {
+public class AccountControl implements Isign{
 	
 	UsersList list = new UsersList();
 	

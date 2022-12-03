@@ -4,7 +4,38 @@ import java.util.Scanner;
 public class MainConsole {
 
 	public static void main(String[] args) {
+var scan = new Scanner(System.in);
 		
+		
+		Service s = new Service(Services.MobileRecharge);
+		s.add_SP(new WeRecharge());
+		
+		ArrayList<String> l = s.get_providers();
+		
+		System.out.println(s.get_type()+":");
+		System.out.println("-----------------");
+		System.out.println("Choose the service provider you want");
+		System.out.println("--------------------------------------------------");
+		for(int i =0;i<l.size();i++)
+		{
+			System.out.println((i+1)+"-"+l.get(i));
+		}
+		System.out.println("0-Exit");
+		System.out.println("--------------------------------------------------");
+		System.out.print(">");
+		
+		int choice = scan.nextInt();
+		if(choice<1&&choice>=l.size())
+			return;
+		
+		
+		ServiceProvider p = s.get_SP(l.get(choice-1));
+		Form f = p.create_form();
+		
+		boolean result = f.start();
+		
+		
+		/*
 		boolean flag = true;
 		Isign control = new AccountControl();
 		
@@ -80,7 +111,7 @@ public class MainConsole {
 			
 		}
 		
-		
+		*/
 		
 	}
 

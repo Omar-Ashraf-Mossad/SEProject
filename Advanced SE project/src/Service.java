@@ -22,7 +22,7 @@ public class Service {
 	Services get_type() {
 		return type;
 	}
-	
+//Makes sure only one instance of  each type is created
 	public static Service getInstance(Services type) {
 		if (!servicerecord.containsKey(type)) {
 		servicerecord.put(type, new Service(type));
@@ -43,7 +43,7 @@ public class Service {
 	{
 		list.add(p);
 	}
-	
+//get a service provider using its name
 	ServiceProvider get_SP(String name)
 	{
 		ServiceProvider p = null;
@@ -57,7 +57,7 @@ public class Service {
 		
 	}
 	
-//Get all service providers names
+//Get all service providers names for this service
 	ArrayList<String> get_providers(){
 		ArrayList<String> l = new ArrayList<String>();
 		

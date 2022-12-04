@@ -1,10 +1,10 @@
 import java.util.Scanner;
 public class UserConsole {
 		
-	private User user;
+	private UserDataAccess access;
 	
-	UserConsole(User u){
-		user = u;
+	UserConsole(UserDataAccess a){
+		access = a;
 	}
 	
 	void start()
@@ -13,8 +13,8 @@ public class UserConsole {
 		while(flag)
 		{
 			System.out.println("-------------------------------");
-			System.out.println("User:" + user.get_name());
-			System.out.println("Balance = "+ user.get_balance());
+			System.out.println("User:" + access.getname());
+			System.out.println("Balance = "+ access.getbalance());
 			
 			System.out.println("Choose Your operation:" );
 			
@@ -31,6 +31,10 @@ public class UserConsole {
 		    
 		    switch(choice)
 		    {
+		    case(1):  OperationControl control = new OperationControl();
+		    			control.getSP(access.getname());
+		    			break;
+		    			
 		    case(4): System.out.println("This operation is not ready yet");
 		    		break;
 		    case(5):flag = false;

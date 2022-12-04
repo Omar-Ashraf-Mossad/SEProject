@@ -12,12 +12,10 @@ public abstract class Form {
 	boolean start() {
 //Template Method	
 		Scanner i = new Scanner(System.in);
-
+		boolean takevalue = true;
+		
+		
 		take_input(i);
-		
-		System.out.print("Enter Amount of money:>");
-		amount = i.nextDouble();
-		
 		
 		System.out.println("-----------------------------------------");
 		

@@ -32,7 +32,13 @@ public class UserConsole {
 		    switch(choice)
 		    {
 		    case(1):  OperationControl control = new OperationControl();
-		    			control.getSP(access.getname());
+		    			String result = control.getSP(access.getname());
+		    			
+		    			if(result != null) {
+		    				System.out.println(result);
+		    				System.out.println("----------------------------------------");
+		    			}
+		    				
 		    			break;
 		    			
 		    case(4): System.out.println("This operation is not ready yet");

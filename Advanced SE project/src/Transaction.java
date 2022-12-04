@@ -2,9 +2,9 @@
 public class Transaction {
 	private String username,SP;
 	private int id;
-    private float amount;
+    private double amount;
     
-    Transaction (String name,String sp,int i,float a){
+    Transaction (String name,String sp,int i,double a){
     	username = name;
     	id = i;
     	SP = sp;
@@ -28,7 +28,7 @@ public class Transaction {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public float getAmount() {
+	public double getAmount() {
 		return amount;
 	}
 	public void setAmount(float amount) {

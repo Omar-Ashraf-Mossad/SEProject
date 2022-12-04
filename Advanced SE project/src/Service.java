@@ -18,6 +18,13 @@ public class Service {
 		discount = 0;
 	}
 	
+	void enablecash() {
+		cash_on_delivery = true;
+	}
+	boolean get_deliverystate()
+	{
+		return cash_on_delivery;
+	}
 //return the service type
 	Services get_type() {
 		return type;

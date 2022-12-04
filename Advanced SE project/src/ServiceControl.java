@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class ServiceControl {
-	
+	private Service s ;
 	
 	ServiceProvider choose_SP()
 	{
@@ -20,7 +20,7 @@ public class ServiceControl {
 				if(name == null)
 					return null;
 				//get instance of the object with the chosen enum
-				Service s = s1.get_service(name);
+				 s = s1.get_service(name);
 				//get list of service providers names
 				
 				
@@ -39,5 +39,10 @@ public class ServiceControl {
 				ServiceProvider p = s.get_SP(name);
 				
 				return p;
+	}
+	
+	Service getService()
+	{
+		return s;
 	}
 }

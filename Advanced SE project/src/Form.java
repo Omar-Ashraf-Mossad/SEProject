@@ -6,13 +6,13 @@ import java.util.HashMap;
 public abstract class Form {
 	
 	protected Map<String,String> formdata = new HashMap<String,String>();
-	
+	boolean takeamount = true;
 	protected double amount;
 	
 	boolean start() {
 //Template Method	
 		
-		boolean takeamount = true;
+		
 		Scanner i = new Scanner(System.in);
 
 		take_input(i);

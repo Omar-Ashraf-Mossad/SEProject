@@ -1,9 +1,9 @@
 import java.util.Scanner;
 public class UserConsole {
 		
-	private UserDataAcess access;
+	private UserDataAccess access;
 	
-	UserConsole(UserDataAcess u){
+	UserConsole(UserDataAccess u){
 		access = u;
 	}
 	

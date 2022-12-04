@@ -17,7 +17,7 @@ public class User {
 	{
 		
 		
-		return new UserConsole(new UserDataAcess(this));
+		return new UserConsole(new UserDataAccess(this));
 	}
 	boolean compare_name(String n) {
 		return name.equals(n);

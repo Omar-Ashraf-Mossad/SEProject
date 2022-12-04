@@ -27,6 +27,8 @@ public class UserConsole {
 			System.out.print(">");
 			
 			Scanner s = new Scanner(System.in);
+			Scanner wall= new Scanner(System.in);
+			Scanner credit=new Scanner(System.in);
 		    int choice = s.nextInt();
 		    
 		    switch(choice)
@@ -40,6 +42,14 @@ public class UserConsole {
 		    			}
 		    				
 		    			break;
+		    case(2):System.out.println("enter the amount to be added to wallet and your credit card");
+		    		double amo;
+		    		int cre;
+		    		amo=wall.nextDouble();
+		    		cre=credit.nextInt();
+		    		access.add_to_wallet( amo);
+		    		System.out.println("You have added the amount to your wallet");
+		    		break;
 		    			
 		    case(4): System.out.println("This operation is not ready yet");
 		    		break;

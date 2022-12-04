@@ -66,4 +66,16 @@ public class UsersList {
 			return user;
 		}
 		
+		public User get_userbyname(String name)
+		{
+			User user = null;
+			for(int i=0;i<list.size();i++)
+			{
+				user = list.get(i);
+				if(user.compare_name(name))
+					break;
+			}
+			return user;
+		}
+		
 }

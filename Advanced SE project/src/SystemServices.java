@@ -56,4 +56,18 @@ public class SystemServices {
 		}
 		return s;
 	}
+	
+	ArrayList<String>  getListOfServiceProviders(String name){
+		Service s = null ;
+		for(int i =0;i<list.size();i++)
+		{
+
+			 s = list.get(i);
+			if(s.get_type().toString()==name)
+				break;
+			
+		}
+		
+		return s.get_providers();
+	}
 }

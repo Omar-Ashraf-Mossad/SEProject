@@ -1,8 +1,9 @@
 public class RefundRequest {
-    String Email,transID,SP;
+    String Email,SP;
+    int transID;
     double amount;
 
-    public RefundRequest(String Email,double amount, String transID, String SP) {
+    public RefundRequest(String Email,double amount, int transID, String SP) {
         this.Email = Email;
         this.amount = amount;
         this.transID = transID;

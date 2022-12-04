@@ -7,6 +7,10 @@ public class UsersList {
 		private static UsersList mainobject;
 		
 		
+		private UsersList() {
+			
+		}
+		
 		public static UsersList getInstance () {
 			if (mainobject == null) { mainobject = new UsersList(); }
 			return mainobject;

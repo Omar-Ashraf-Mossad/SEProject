@@ -2,9 +2,13 @@ public class Pay_wallet implements Payment{
 	public boolean pay(String name,double amount,String sp) {
 		String s_wallet=name;
 		double wallet;
+		
+		
 		UsersList user = UsersList.getInstance();
 		User us;
-		us= user.get_userbyname(s_wallet);
+		
+		us= user.get_userbyname(name);
+		
 		wallet= us.get_balance();
 		double k_wallet=amount;
 		if(wallet<amount)

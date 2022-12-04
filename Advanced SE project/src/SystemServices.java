@@ -25,32 +25,32 @@ public class SystemServices {
 		return mainobject;
 	}
 	
-	//get list of services Types which are enums
-	ArrayList<Services> get_services()
+	//get list of services Types in a string
+	ArrayList<String> get_services()
 	{
 		
 		//List of enum
-		ArrayList<Services> l = new ArrayList<Services>();
+		ArrayList<String> l = new ArrayList<String>();
 		
 		for(int i =0;i<list.size();i++)
 		{
 
 			Service s = list.get(i);
-			l.add(s.get_type());
+			l.add(s.get_type().toString());
 			
 		}
 		return l;
 	}
 	
 	//Get a specific Service using its enum
-	Service get_service(Services e)
+	Service get_service(String  e)
 	{
 		Service s = null ;
 		for(int i =0;i<list.size();i++)
 		{
 
 			 s = list.get(i);
-			if(s.get_type()==e)
+			if(s.get_type().toString()==e)
 				break;
 			
 		}

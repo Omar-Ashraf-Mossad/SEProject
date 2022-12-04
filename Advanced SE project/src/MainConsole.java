@@ -5,6 +5,8 @@ public class MainConsole {
 
 	public static void main(String[] args) {
 		
+		
+	
 var scan = new Scanner(System.in);
 		
 		

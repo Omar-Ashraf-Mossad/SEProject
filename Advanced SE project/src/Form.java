@@ -11,12 +11,16 @@ public abstract class Form {
 	
 	boolean start() {
 //Template Method	
+		
+		boolean takeamount = true;
 		Scanner i = new Scanner(System.in);
 
 		take_input(i);
+		if(takeamount) {
+			System.out.print("Enter Amount of money:>");
+			amount = i.nextDouble();
+		}
 		
-		System.out.print("Enter Amount of money:>");
-		amount = i.nextDouble();
 		
 		
 		System.out.println("-----------------------------------------");

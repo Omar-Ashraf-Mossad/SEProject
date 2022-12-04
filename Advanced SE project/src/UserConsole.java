@@ -1,10 +1,10 @@
 import java.util.Scanner;
 public class UserConsole {
 		
-	private User user;
+	private UserDataAcess access;
 	
-	UserConsole(User u){
-		user = u;
+	UserConsole(UserDataAcess u){
+		access = u;
 	}
 	
 	void start()
@@ -13,8 +13,8 @@ public class UserConsole {
 		while(flag)
 		{
 			System.out.println("-------------------------------");
-			System.out.println("User:" + user.get_name());
-			System.out.println("Balance = "+ user.get_balance());
+			System.out.println("User:" + access.getname());
+			System.out.println("Balance = "+ access.getbalance());
 			
 			System.out.println("Choose Your operation:" );
 			
@@ -31,7 +31,6 @@ public class UserConsole {
 		    
 		    switch(choice)
 		    {
-<<<<<<< HEAD
 		    case(1):  OperationControl control = new OperationControl();
 		    			String result = control.getSP(access.getname());
 		    			
@@ -42,8 +41,6 @@ public class UserConsole {
 		    				
 		    			break;
 		    			
-=======
->>>>>>> parent of dfd8469 (Added Service Search)
 		    case(4): System.out.println("This operation is not ready yet");
 		    		break;
 		    case(5):flag = false;

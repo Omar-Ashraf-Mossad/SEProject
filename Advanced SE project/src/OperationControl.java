@@ -1,7 +1,6 @@
 
 public class OperationControl {
 	
-<<<<<<< HEAD
 	
 	public String getSP(String username)
 	{
@@ -18,7 +17,7 @@ public class OperationControl {
 		boolean result = f.start();
 		
 		if(!result)
-			return null;
+			return "Payment Cancelled";
 		
 		
 		Service s = control.getService();
@@ -46,6 +45,4 @@ public class OperationControl {
 		
 		
 	}
-=======
->>>>>>> parent of dfd8469 (Added Service Search)
 }

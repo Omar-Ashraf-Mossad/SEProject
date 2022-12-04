@@ -1,15 +1,23 @@
-
 public class RefundRequest {
-	String username,transID,SP;
-    float amount;
+    String Email,transID,SP;
+    double amount;
 
-    public RefundRequest(String username,float amount, String transID, String SP) {
-        this.username = username;
+    public RefundRequest(String Email,double amount, String transID, String SP) {
+        this.Email = Email;
         this.amount = amount;
         this.transID = transID;
         this.SP = SP;
     }
+
     public void print() {
-        System.out.println(username + " " + amount + " " + transID + " " + SP);
+        System.out.println(Email + " " + amount + " " + transID + " " + SP);
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public String getEmail() {
+        return Email;
     }
 }

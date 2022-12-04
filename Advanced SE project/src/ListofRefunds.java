@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 
 public class ListofRefunds {
-	
-	private static ArrayList<RefundRequest> RefundList = new ArrayList<RefundRequest>();
+
+    private static ListofRefunds mainObj;
+
+    public ArrayList<RefundRequest> RefundList = new ArrayList<RefundRequest>();
     //singleton
     private static ListofRefunds instance = null;
 
@@ -17,18 +19,31 @@ public class ListofRefunds {
         return instance;
     }
 
-    public  void addRefund(RefundRequest refund) {
+    public void addRefund(RefundRequest refund) {
         RefundList.add(refund);
     }
-    public  void removeRefund(RefundRequest refund) {
-        RefundList.remove(refund);
+    public void removeRefund(int index) {
+        RefundList.remove(index);
     }
-    public static ArrayList<RefundRequest> getList() {
+    public ArrayList<RefundRequest> getList() {
         return RefundList;
     }
-    public  void print() {
+    private int counter = 1;
+    public void print() {
+        int counter = 1;
         for(RefundRequest i :RefundList){
+            System.out.println(counter + ": ");
             i.print();
+            counter++;
         }
+    }
+    public String getEmailAtIndex(int index){
+        return RefundList.get(index).getEmail();
+    }
+    public double getRefundAmount(int index){
+        return RefundList.get(index).getAmount();
+    }
+    public boolean CheckEmpty(){
+        return RefundList.isEmpty();
     }
 }

@@ -1,7 +1,7 @@
 
 public class AccountControl implements Isign{
 	
-	UsersList list = UsersList.getInstance();
+	UsersList list = new UsersList();
 	
 	
 	public String sign_up(String name,String email,String password)

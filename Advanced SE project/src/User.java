@@ -15,9 +15,7 @@ public class User {
 	}
 	UserConsole get_form()
 	{
-		
-		
-		return new UserConsole(new UserDataAccess(this));
+		return new UserConsole(this);
 	}
 	boolean compare_name(String n) {
 		return name.equals(n);

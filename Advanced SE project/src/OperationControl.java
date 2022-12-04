@@ -1,6 +1,7 @@
 
 public class OperationControl {
 	
+<<<<<<< HEAD
 	
 	public String getSP(String username)
 	{
@@ -45,4 +46,6 @@ public class OperationControl {
 		
 		
 	}
+=======
+>>>>>>> parent of dfd8469 (Added Service Search)
 }

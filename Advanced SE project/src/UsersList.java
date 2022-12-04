@@ -2,14 +2,10 @@ import java.util.ArrayList;
 
 
 public class UsersList {
-		private ArrayList<User> list;
+		private ArrayList<User> list = new ArrayList<User>();
 		
 		private static UsersList mainobject;
 		
-		
-		private UsersList(){
-			list = new ArrayList<User>();
-		}
 		
 		public static UsersList getInstance () {
 			if (mainobject == null) { mainobject = new UsersList(); }

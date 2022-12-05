@@ -20,6 +20,12 @@ public class SystemServices {
 		s2.add_SP(new MonthlyPay());
 		
 		Service s3 = new Service(Services.InternetPayment);
+		s3.add_SP(new WeInternetRecharge());
+		s3.add_SP(new VodafoneInternet());
+		s3.add_SP(new EtisalatInternet());
+		s3.add_SP(new OrangeInternet());
+		
+		
 		Service s4 = new Service(Services.Donations);
 		s4.add_SP(new SchoolDonation());
 		s4.add_SP(new NGOS_Donations());

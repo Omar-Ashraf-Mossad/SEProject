@@ -53,14 +53,15 @@ public class UserConsole {
 		    		break;
 		    case(3):
 		    		RefundRequestControl controlObj = new RefundRequestControl();
+		    		System.out.print("Enter transaction ID : ");
 		    		int transactionID = transID.nextInt();
 		    		if(controlObj.RequestARefund(transactionID,access.getmail())) {
 		    			System.out.println("Refund request was added.");
 		    		}else {
 		    			System.out.println("Transaction wasn't found .");
 		    		}
-		    		
-		    			
+		    		break;
+		    				
 		    case(4): System.out.println("This operation is not ready yet");
 		    		break;
 		    case(5):flag = false;

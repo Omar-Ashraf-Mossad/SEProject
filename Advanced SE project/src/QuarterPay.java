@@ -15,7 +15,7 @@ public class QuarterPay implements ServiceProvider {
 		
 		message += amount;
 		
-		message += "EGP to LandLine"+ m.get("Number")+"For the next 4 months";
+		message += "EGP to LandLine "+ m.get("Number")+" For the next 4 months";
 		
 		return message;
 	}

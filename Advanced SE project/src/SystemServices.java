@@ -10,6 +10,10 @@ public class SystemServices {
 		
 		Service s = new Service(Services.MobileRecharge);
 		s.add_SP(new WeRecharge());
+		s.add_SP(new OrangRecharge());
+		s.add_SP(new VodafoneRecharge());
+		s.add_SP(new EtisalatRecharge());
+
 		
 		Service s2 = new Service(Services.LandLine);
 		Service s3 = new Service(Services.InternetPayment);

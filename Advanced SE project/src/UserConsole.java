@@ -35,7 +35,7 @@ public class UserConsole {
 		    switch(choice)
 		    {
 		    case(1):  OperationControl control = new OperationControl();
-		    			String result = control.getSP(access.getname(),access.getmail());
+		    			String result = control.getSP(access.getname(),access.getmail(),access.isnew(),access);
 		    			
 		    			if(result != null) {
 		    				System.out.println(result);

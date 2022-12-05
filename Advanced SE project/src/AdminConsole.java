@@ -68,7 +68,7 @@ public class AdminConsole {
             if(c==3)
             	return true;
             ViewOptions(c);
-            return true;
+            
     	}
         
     }

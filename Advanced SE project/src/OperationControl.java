@@ -2,7 +2,7 @@
 public class OperationControl {
 	
 	
-	public String getSP(String username,String email)
+	public String getSP(String username,String email,boolean isnew,UserDataAccess access)
 	{
 		
 		
@@ -29,20 +29,30 @@ public class OperationControl {
 		
 		double discount = s.get_discout();
 		
+		float d = 0;
 		
-		result = pay1.excute(s.get_deliverystate(), discount, username, f.get_amount(), s.get_type().toString(), p.get_name());
+		
+		if(isnew) {
+			OverallDiscounts dis = OverallDiscounts.getInstance();
+			 d = dis.getPercent();
+		}
+			 
+		
+		result = pay1.excute(s.get_deliverystate(), discount,d, username, f.get_amount(), s.get_type().toString(), p.get_name());
 		
 		
 		if(!result)
 			return "Payment Cancelled";
 		
 		TransactionList list = TransactionList.getInstance();
-		
-		Transaction t = new Transaction(email,p.get_name(),0,f.get_amount());
+		double total = f.get_amount();
+		total = total-(d*total)/100-(discount*total)/100;
+		Transaction t = new Transaction(email,p.get_name(),0,total);
 		int id = list.addtransaction(t);
 		
 		String message = p.handle(f.get_data(), f.amount);
 		
+		access.changestate();
 		return "\nYour Receipt ID is:"+id+"\n--------------------------------\n"+message;
 		
 		

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class PaymentConsole {
 	Payment pays;
-	public boolean run(boolean Isdelivery,double discount,String username,double amo,String ser,String ser_prov)
+	public boolean run(boolean Isdelivery,double discount,double discount2,String username,double amo,String ser,String ser_prov)
 	{
 		boolean deliverable=Isdelivery;
 		double dis=discount;
@@ -12,16 +12,18 @@ public class PaymentConsole {
 		double amount=amo;
 		boolean flag=false;
 		Scanner is = new Scanner(System.in);
-		if(discount!=0)
-		{
-			temp=amount-(discount*amount);
+		
+			temp=amount-(discount*amount)/100-(discount2*amount)/100;
 			flag=true;
-		}
+		
 		System.out.println("-------------------------------");
-		if(flag)
-		{
-			System.out.println("there were an discount applied on the amount: "+amount+" and the final price is: "+temp+" pounds");
-		}
+		System.out.println("Your money amount:"+ amount);
+		System.out.println("ServiceDiscount: "+discount+"%");
+		System.out.println("Overall discount: "+discount2+"%");
+		System.out.println("-------------------------------");
+		System.out.println("total: "+ temp);
+		System.out.println("-------------------------------");
+		
 		System.out.println("how do you want to pay for the service: "+service);
 		System.out.println("1- Via credit card");
 		System.out.println("2- By wallet");

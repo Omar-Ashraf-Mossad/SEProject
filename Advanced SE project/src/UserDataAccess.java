@@ -6,6 +6,14 @@ public class UserDataAccess {
 	{
 		user = u;
 	}
+	
+	void changestate() {
+		user.changeNewState();
+	}
+	boolean isnew()
+	{
+		return user.isNew();
+	}
 	void add_to_wallet(double amo)
 	{
 		double tmp;

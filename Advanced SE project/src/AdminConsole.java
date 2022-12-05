@@ -10,6 +10,7 @@ public class AdminConsole {
     }
 
     public void ViewOptions(int choice){
+    	
         switch(choice) {
             case 1 -> {
                 if(managment.EmptyList()){
@@ -40,10 +41,17 @@ public class AdminConsole {
         }
 
     }
-    public AdminConsole() {
-        System.out.println("pick an Operation : \n 1 to manage Refunds \n 2 to manage discounts ");
-        int c = adminInput.nextInt();
-        ViewOptions(c);
+    public boolean start() {
+    	
+    	while(true) {
+    		System.out.println("pick an Operation : \n 1 to manage Refunds \n 2 to manage discounts \n 3 to logout");
+            int c = adminInput.nextInt();
+            if(c==3)
+            	return true;
+            ViewOptions(c);
+            return true;
+    	}
+        
     }
 
 }

@@ -20,14 +20,14 @@ public class TransactionList {
 		return instance;
 	}
 	
-	boolean check_exist(int id,String name) {
+	boolean check_exist(int id,String e) {
 		
 		
 		for(int i =0;i<list.size();i++)
 		{
 			Transaction t = list.get(i);
 			
-			if(t.getUsername().equals(name) && t.getId() == id)
+			if(t.getemail().equals(e) && t.getId() == id)
 				return true;
 		}
 		return false;

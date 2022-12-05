@@ -16,6 +16,8 @@ var scan = new Scanner(System.in);
 		while(flag)
 		{
 			System.out.println("--------------------------------------");
+			System.out.println("-If you want to login to adminconsole login using:\n  email = admin \n password = admin");
+			System.out.println("--------------------------------------");
 			System.out.println("Choose your operation:");
 			
 

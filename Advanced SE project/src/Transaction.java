@@ -1,11 +1,11 @@
 
 public class Transaction {
-	private String username,SP;
+	private String email,SP;
 	private int id;
     private double amount;
     
-    Transaction (String name,String sp,int i,double a){
-    	username = name;
+    Transaction (String e,String sp,int i,double a){
+    	email = e;
     	id = i;
     	SP = sp;
     	amount =a ;
@@ -16,11 +16,11 @@ public class Transaction {
 	public void setSP(String sP) {
 		SP = sP;
 	}
-	public String getUsername() {
-		return username;
+	public String getemail() {
+		return email;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUseremail(String e) {
+		this.email = e;
 	}
 	public int getId() {
 		return id;

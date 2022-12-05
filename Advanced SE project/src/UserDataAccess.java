@@ -18,6 +18,9 @@ public class UserDataAccess {
 	String getname() {
 		return user.get_name();
 	}
+	String getmail() {
+		return user.get_email();
+	}
 	
 	double getbalance()
 	{

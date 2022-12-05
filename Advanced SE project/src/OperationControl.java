@@ -2,8 +2,10 @@
 public class OperationControl {
 	
 	
-	public String getSP(String username)
+	public String getSP(String username,String email)
 	{
+		
+		
 		ServiceControl control = new ServiceControl();
 		
 		
@@ -36,7 +38,7 @@ public class OperationControl {
 		
 		TransactionList list = TransactionList.getInstance();
 		
-		Transaction t = new Transaction(username,p.get_name(),0,f.get_amount());
+		Transaction t = new Transaction(email,p.get_name(),0,f.get_amount());
 		int id = list.addtransaction(t);
 		
 		String message = p.handle(f.get_data(), f.amount);

@@ -6,6 +6,8 @@ public class AccountControl implements Isign{
 	
 	public String sign_up(String name,String email,String password)
 	{
+		
+	
 		if(list.check_name(name)) {
 			return "This user name is already taken";
 		}
@@ -21,7 +23,15 @@ public class AccountControl implements Isign{
 	}
 	public boolean log_in(String email,String password)
 	{
-		if(list.check_exist(email, password))
+		
+		Admin a = new Admin();
+		a.setAdminName("admin");
+		
+		if(email.equals(a.getAdminName())&&password.equals(a.getAdminName())) {
+			AdminConsole c = new AdminConsole();
+			return c.start();
+		}
+		else if(list.check_exist(email, password))
 		{
 			User u = list.get_user(email);
 			UserConsole c = u.get_form();

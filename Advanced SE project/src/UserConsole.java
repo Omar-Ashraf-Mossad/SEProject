@@ -29,6 +29,7 @@ public class UserConsole {
 			Scanner s = new Scanner(System.in);
 			Scanner wall= new Scanner(System.in);
 			Scanner credit=new Scanner(System.in);
+			Scanner transID =new Scanner(System.in);
 		    int choice = s.nextInt();
 		    
 		    switch(choice)
@@ -50,6 +51,15 @@ public class UserConsole {
 		    		access.add_to_wallet( amo);
 		    		System.out.println("You have added the amount to your wallet");
 		    		break;
+		    case(3):
+		    		RefundRequestControl controlObj = new RefundRequestControl();
+		    		int transactionID = transID.nextInt();
+		    		if(controlObj.RequestARefund(transactionID,access.getmail())) {
+		    			System.out.println("Refund request was added.");
+		    		}else {
+		    			System.out.println("Transaction wasn't found .");
+		    		}
+		    		
 		    			
 		    case(4): System.out.println("This operation is not ready yet");
 		    		break;

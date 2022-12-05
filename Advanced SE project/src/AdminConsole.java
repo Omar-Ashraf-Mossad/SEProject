@@ -32,11 +32,30 @@ public class AdminConsole {
                         }
                         default -> {
                             System.out.println("Please enter a correct operation number");
-                        }
+                        }              
                     }
                 }
                 }
-            case 2 -> System.out.println("Operation 2");
+            case 2 -> {
+            	System.out.println("Enter Discount Percent : ");
+                DiscountManagment DM = new DiscountManagment();
+                float perecnt = adminInput.nextFloat();
+                boolean flag = true;
+                while (flag){
+                    System.out.println("Select Discount Type : \n 1 for overall discount \n 2 for specific discount");
+                    int disChoice = adminInput.nextInt();
+                    switch (disChoice){
+                        case 1 -> {DM.SetOverAll(perecnt);
+                                flag = false;
+                        }
+                        case 2 -> {DM.specificdiscount(perecnt);
+                                flag = false;
+                        }
+                        default -> System.out.println("Please enter a correct operation number");
+                    }
+                }
+                System.out.println("Discount has been added.");
+            }
             default -> System.out.println("Please enter a correct operation number");
         }
 

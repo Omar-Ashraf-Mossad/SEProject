@@ -1,5 +1,5 @@
 #Advanced SEProject                             
-                                                                                                                                Github name         Name              ID
+ Github name         Name              ID
 
 #2020112      عمر اشرف مسعد       TheNight1234
  

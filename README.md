@@ -1,5 +1,13 @@
-#Advanced SEProject
-#2020112
-#20200759
-#20201007
-#20201003 the eclipse program wasn't working on his pc so he wasn't able to push
+#Advanced SEProject                             
+ Github name         Name              ID
+
+#20201122      عمر اشرف مسعد       TheNight1234
+ 
+
+#20200759       نور الدين وليد       NE420
+
+
+#20201007     احمد حسام احمد        ahmedthecreator
+
+#20201003          احمد ثروت              ahmadtharwat 
+<the eclipse program wasn't working on his pc so he wasn't able to push>

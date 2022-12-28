@@ -1,12 +1,12 @@
 import java.util.Scanner;
 public class PaymentConsole {
 	Payment pays;
-	public boolean run(boolean Isdelivery,double discount,double discount2,String username,double amo,String ser,String ser_prov)
+	public String run(boolean Isdelivery,double discount,double discount2,String username,double amo,String ser_prov)
 	{
 		boolean deliverable=Isdelivery;
 		double dis=discount;
 		String userNa=username;
-		String service=ser;
+		
 		String service_provider=ser_prov;
 		double temp=0;
 		double amount=amo;
@@ -24,7 +24,7 @@ public class PaymentConsole {
 		System.out.println("total: "+ temp);
 		System.out.println("-------------------------------");
 		
-		System.out.println("how do you want to pay for the service: "+service);
+		System.out.println("how do you want to pay for the service: "+ser_prov);
 		System.out.println("1- Via credit card");
 		System.out.println("2- By wallet");
 		if(deliverable)
@@ -39,12 +39,14 @@ public class PaymentConsole {
 			System.out.println("enter one of the valid operations");
 			choice = is.nextInt();
 		}
-		boolean res=false;
+		String res ="";
 		 switch(choice)
 		 {
-		 case(1): pays = new pay_CreditCard();
-		 		  res= pays.pay(userNa,temp,service_provider);
-			 	  break;
+		 case(1):	System.out.println("enter your credit card number");
+		 			int c = is.nextInt();
+			 		pays = new pay_CreditCard(c);
+		 		    res= pays.pay(userNa,temp,service_provider);
+			 	    break;
 			 	  
 		 case(2): pays = new Pay_wallet();
 			 	   res= pays.pay(userNa,temp,service_provider);

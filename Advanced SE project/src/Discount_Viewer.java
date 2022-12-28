@@ -8,7 +8,7 @@ public class Discount_Viewer {
 		
 	     OverallDiscounts ov = OverallDiscounts.getInstance();
 		SystemServices s1 = SystemServices.getInstance();
-	     ArrayList<String> l1 = s1.get_services();
+	     ArrayList<String> l1 = s1.get_providers();
 	     Discuonts_form f = new Discuonts_form();
 	     
 	    String name =  f.start(l1);
@@ -20,7 +20,7 @@ public class Discount_Viewer {
 	     else if (name == "overall")
 	    	 return "Overall Discuont: "+ ov.getPercent();
 	     
-	     return name+": "+s1.get_service(name).get_discout();
+	     return name+": "+s1.get_SP(name).getDiscount();
 	     
 	     
 	     

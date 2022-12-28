@@ -29,13 +29,15 @@ public class ListofRefunds {
         return RefundList;
     }
     private int counter = 1;
-    public void print() {
+    public ArrayList<String> print() {
+    	ArrayList<String> l = new ArrayList<String>();
         int counter = 1;
         for(RefundRequest i :RefundList){
-            System.out.println(counter + ": ");
-            i.print();
+        	String Message = counter + "-" + "  "+i.print();
+        	l.add(Message);
             counter++;
         }
+        return l;
     }
     public String getEmailAtIndex(int index){
         return RefundList.get(index).getEmail();

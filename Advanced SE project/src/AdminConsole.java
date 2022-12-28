@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AdminConsole {
@@ -6,7 +7,12 @@ public class AdminConsole {
     Scanner adminInput = new Scanner(System.in);
 
     public void ViewRefunds(){
-        managment.getRefundsList().print();
+       ArrayList<String> l =  managment.getRefundsList().print();
+       
+       for(String s:l)
+       {
+    	   System.out.println(s);
+       }
     }
 
     public void ViewOptions(int choice){

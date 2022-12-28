@@ -9,9 +9,7 @@ public class SearchForm {
 	String start(ArrayList<String> list, String name)
 	{
 		var scan = new Scanner(System.in);
-		System.out.println(name);
 
-		System.out.println("-----------------");
 		System.out.println(name);
 		System.out.println("--------------------------------------------------");
 		for(int i =0;i<list.size();i++)

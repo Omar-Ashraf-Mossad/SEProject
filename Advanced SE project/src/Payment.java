@@ -1,4 +1,4 @@
 
 public interface Payment {
-	public boolean pay(String name,double amout,String sp);
+	public String pay(String name,double amout,String sp);
 }

@@ -9,8 +9,8 @@ public class DiscountManagment {
     public void specificdiscount(float Percent){
         if(Percent > 0 && Percent < 100){
             ServiceControl SC = new ServiceControl();
-            Service s1 = SC.ChooseService();
-            s1.set_discount(Percent);
+            ServiceProvider s1 = SC.choose_SP();
+            s1.setDiscount(Percent);
         }
         else{
             System.out.println("invalid Discount percent.");

@@ -10,8 +10,8 @@ public class RefundRequest {
         this.SP = SP;
     }
 
-    public void print() {
-        System.out.println(Email + " " + amount + " " + transID + " " + SP);
+    public String print() {
+        return "email: " +Email + "  amount: " + amount + " Id: " + transID + " SP: " + SP;
     }
 
     public double getAmount() {

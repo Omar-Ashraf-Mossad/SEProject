@@ -16,18 +16,14 @@ public class OperationControl {
 		
 		Form f = p.create_form();
 		
-		boolean result = f.start();
+		boolean result2 = f.start();
 		
-		if(!result)
-			return "Payment Cancelled";
-		
-		
-		Service s = control.getService();
-		
+		if(!result2)
+			return "Payment Cancelled";		
 		
 		PaymentControl pay1 = new PaymentControl();
 		
-		double discount = s.get_discout();
+		double discount = p.getDiscount();
 		
 		float d = 0;
 		
@@ -37,12 +33,12 @@ public class OperationControl {
 			 d = dis.getPercent();
 		}
 			 
+		String result;
+		result = pay1.excute(p.get_deliverystate(), discount,d, username, f.get_amount(), p.get_name());
 		
-		result = pay1.excute(s.get_deliverystate(), discount,d, username, f.get_amount(), s.get_type().toString(), p.get_name());
 		
-		
-		if(!result)
-			return "Payment Cancelled";
+		if(result == "you dont have enough money in your wallet")
+			return result +"\n --------------\n+Payment Cancelled" ;
 		
 		TransactionList list = TransactionList.getInstance();
 		double total = f.get_amount();
@@ -53,7 +49,7 @@ public class OperationControl {
 		String message = p.handle(f.get_data(), f.amount);
 		
 		access.changestate();
-		return "\nYour Receipt ID is:"+id+"\n--------------------------------\n"+message;
+		return result+"\n--------------------\n Your Receipt ID is:"+id+"\n--------------------------------\n"+message;
 		
 		
 	}

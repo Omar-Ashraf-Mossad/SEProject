@@ -1,38 +1,37 @@
 import java.util.ArrayList;
 
 public class SystemServices {
-	private ArrayList<Service> list = new ArrayList<Service>();
+	private ArrayList<ServiceProvider> list = new ArrayList<ServiceProvider>();
 	
 	private static SystemServices mainobject;
 	//initialize the lists
 	private SystemServices() {
 		
 		
-		Service s = new Service(Services.MobileRecharge);
-		s.add_SP(new WeRecharge());
-		s.add_SP(new OrangRecharge());
-		s.add_SP(new VodafoneRecharge());
-		s.add_SP(new EtisalatRecharge());
+		
+		add_SP(new WeRecharge());
+		add_SP(new OrangRecharge());
+		add_SP(new VodafoneRecharge());
+		add_SP(new EtisalatRecharge());
 
 		
-		Service s2 = new Service(Services.LandLine);
-		s2.add_SP(new QuarterPay());
-		s2.add_SP(new MonthlyPay());
+	
+		add_SP(new QuarterPay());
+		add_SP(new MonthlyPay());
 		
-		Service s3 = new Service(Services.InternetPayment);
-		s3.add_SP(new WeInternetRecharge());
-		s3.add_SP(new VodafoneInternet());
-		s3.add_SP(new EtisalatInternet());
-		s3.add_SP(new OrangeInternet());
-		
-		
-		Service s4 = new Service(Services.Donations);
-		s4.add_SP(new SchoolDonation());
-		s4.add_SP(new NGOS_Donations());
-		s4.add_SP(new HospitalDonations());
+
+		add_SP(new WeInternetRecharge());
+		add_SP(new VodafoneInternet());
+		add_SP(new EtisalatInternet());
+		add_SP(new OrangeInternet());
 		
 		
-		list.add(s4);    list.add(s3);     list.add(s2);      list.add(s);
+		add_SP(new SchoolDonation());
+		add_SP(new NGOS_Donations());
+		add_SP(new HospitalDonations());
+		
+		
+
 		
 	}
 	//Make one instance 
@@ -40,38 +39,39 @@ public class SystemServices {
 		if (mainobject == null) { mainobject = new SystemServices(); }
 		return mainobject;
 	}
-	
+	//Add a new service provider for this service
+		void add_SP(ServiceProvider p)
+		{
+			list.add(p);
+		}
+	//get a service provider using its name
+		ServiceProvider get_SP(String name)
+		{
+			ServiceProvider p = null;
+			for(int i = 0;i<list.size();i++)
+			{
+				 p = list.get(i);
+				if(p.get_name().equals(name))
+					break;
+			}
+			return p;
+			
+		}
 	//get list of services Types in a string
-	ArrayList<String> get_services()
-	{
-		
-		//List of enum
+	
+	
+	//Get a specific Service using its enum
+	ArrayList<String> get_providers(){
 		ArrayList<String> l = new ArrayList<String>();
 		
 		for(int i =0;i<list.size();i++)
 		{
-
-			Service s = list.get(i);
-			l.add(s.get_type().toString());
-			
+			ServiceProvider p = list.get(i);
+			l.add(p.get_name());
 		}
 		return l;
 	}
 	
-	//Get a specific Service using its enum
-	Service get_service(String  e)
-	{
-		Service s = null ;
-		for(int i =0;i<list.size();i++)
-		{
-
-			 s = list.get(i);
-			if(s.get_type().toString()==e)
-				break;
-			
-		}
-		return s;
-	}
 	
 	
 }

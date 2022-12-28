@@ -1,5 +1,8 @@
 package discountPack;
 
+import serviceprovider.ServiceProvider;
+import services.ServiceControl;
+
 public class DiscountManagment {
 	
 	public void SetOverAll(float Percent){

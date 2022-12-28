@@ -5,7 +5,7 @@ public class Transaction {
 	private int id;
     private double amount;
     
-    Transaction (String e,String sp,int i,double a){
+    public Transaction (String e,String sp,int i,double a){
     	email = e;
     	id = i;
     	SP = sp;

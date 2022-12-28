@@ -51,7 +51,7 @@ public class User {
 		balance = b;
 	}
 	
-	double get_balance()
+	public double get_balance()
 	{
 		return balance;
 	}

@@ -2,13 +2,13 @@ package userPack;
 
 public class UserDataAccess {
 	
-	private User user;
+	public User user;
 	UserDataAccess(User u)
 	{
 		user = u;
 	}
 	
-	void changestate() {
+	public void changestate() {
 		user.changeNewState();
 	}
 	boolean isnew()

@@ -48,7 +48,7 @@ public class TransactionList {
 		return null;
 	}
 	
-	int addtransaction(Transaction t) {
+	public int addtransaction(Transaction t) {
 		id++;
 		t.setId(id);
 		

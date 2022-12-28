@@ -1,6 +1,6 @@
 import java.util.Map;
 
-public class EtisalatInternet implements ServiceProvider {
+public class EtisalatInternet extends ServiceProvider {
 	String name = "Etistalat internet recharge";
 	@Override
 	public String get_name() {

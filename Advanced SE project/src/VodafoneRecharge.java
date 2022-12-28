@@ -1,6 +1,6 @@
 import java.util.Map;
 
-public class VodafoneRecharge implements ServiceProvider {
+public class VodafoneRecharge extends ServiceProvider {
 	String name = "Vodafone Recharge ";
 	@Override
 	public String get_name() {

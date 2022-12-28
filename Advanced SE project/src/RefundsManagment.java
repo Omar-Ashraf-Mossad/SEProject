@@ -7,7 +7,7 @@ public class RefundsManagment {
         ListofRefunds RefundListInstance = ListofRefunds.getInstance();
         UsersList UserListInstance = UsersList.getInstance();
         String EmailOfRefund = RefundListInstance.getEmailAtIndex(indexOfRefund);//gets the email of the picked user
-        double RefundAmount = RefundListInstance.getRefundAmount(indexOfRefund);//gets the refund amount of the refund
+        double RefundAmount = RefundListInstance.getRefundAmount(indexOfRefund) +  UserListInstance.get_user(EmailOfRefund).get_balance();//gets the refund amount of the refund
         UserListInstance.get_user(EmailOfRefund).addbalance(RefundAmount);//adds the refund amount back to user as balance
     }
     public  ListofRefunds getRefundsList(){

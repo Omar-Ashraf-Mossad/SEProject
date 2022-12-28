@@ -1,6 +1,6 @@
 import java.util.Map;
 
-public class WeInternetRecharge implements ServiceProvider {
+public class WeInternetRecharge extends ServiceProvider {
 	
 	String name = "WeInternet";
 	@Override

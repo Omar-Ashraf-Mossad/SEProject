@@ -21,7 +21,7 @@ public class UserConsole {
 			System.out.println("1-Search for a service");
 			System.out.println("2-Add funds to wallet");
 			System.out.println("3-Request a refund");
-			System.out.println("4-check discount (not finished)");
+			System.out.println("4-check discount");
 			System.out.println("5-logout");
 			System.out.println("-------------------------------");
 			System.out.print(">");
@@ -62,7 +62,11 @@ public class UserConsole {
 		    		}
 		    		break;
 		    				
-		    case(4): System.out.println("This operation is not ready yet");
+		    case(4): Discount_Viewer dv = new Discount_Viewer();
+		    		String result4 =  dv.get_discuont();
+		    		if(result4 == null)
+		    			break;
+		    		System.out.println(result4+" %");
 		    		break;
 		    case(5):flag = false;
 		    		break;

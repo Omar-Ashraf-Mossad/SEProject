@@ -1,6 +1,6 @@
 import java.util.Map;
 
-public class OrangRecharge implements ServiceProvider{
+public class OrangRecharge extends ServiceProvider{
 	String name = "OrangeRecharge";
 	@Override
 	public String get_name() {

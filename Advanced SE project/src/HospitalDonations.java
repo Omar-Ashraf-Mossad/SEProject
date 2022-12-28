@@ -1,6 +1,6 @@
 import java.util.Map;
 
-public class HospitalDonations implements ServiceProvider {
+public class HospitalDonations extends ServiceProvider {
 	String name = "HospitalDonations ";
 	@Override
 	public String get_name() {

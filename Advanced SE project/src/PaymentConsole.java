@@ -43,14 +43,14 @@ public class PaymentConsole {
 		 switch(choice)
 		 {
 		 case(1): pays = new pay_CreditCard();
-		 		  res= pays.pay(userNa,amount,service_provider);
+		 		  res= pays.pay(userNa,temp,service_provider);
 			 	  break;
 			 	  
 		 case(2): pays = new Pay_wallet();
-			 	   res= pays.pay(userNa,amount,service_provider);
+			 	   res= pays.pay(userNa,temp,service_provider);
 			 	  break;
 		 case(3): pays = new Pay_on_delivery();
-		 		  res= pays.pay(userNa,amount,service_provider);
+		 		  res= pays.pay(userNa,temp,service_provider);
 			 	  break;
 		 
 		 }

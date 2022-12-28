@@ -1,6 +1,6 @@
 import java.util.Map;
 
-public class QuarterPay implements ServiceProvider {
+public class QuarterPay extends ServiceProvider {
 	
 	String name = "Quarter Pay ";
 	@Override

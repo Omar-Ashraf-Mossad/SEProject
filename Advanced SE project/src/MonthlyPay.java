@@ -1,6 +1,6 @@
 import java.util.Map;
 
-public class MonthlyPay implements ServiceProvider {
+public class MonthlyPay extends ServiceProvider {
 	String name = "MonthlyRecipt ";
 	@Override
 	public String get_name() {

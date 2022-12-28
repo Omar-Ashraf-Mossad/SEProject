@@ -1,5 +1,5 @@
 import java.util.Map;
-public class WeRecharge  implements ServiceProvider{
+public class WeRecharge  extends ServiceProvider{
 	
 	String name = "WeRechargeService";
 	@Override

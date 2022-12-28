@@ -1,4 +1,7 @@
+package transactionPack;
+
 import java.util.ArrayList;
+
 
 
 public class TransactionList {
@@ -20,7 +23,7 @@ public class TransactionList {
 		return instance;
 	}
 	
-	boolean check_exist(int id,String e) {
+	public boolean check_exist(int id,String e) {
 		
 		
 		for(int i =0;i<list.size();i++)
@@ -33,7 +36,7 @@ public class TransactionList {
 		return false;
 	}
 	
-	Transaction getbyid(int id)
+	public Transaction getbyid(int id)
 	{
 		for(int i =0;i<list.size();i++)
 		{

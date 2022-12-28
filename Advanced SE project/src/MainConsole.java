@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import userPack.*;
+
 public class MainConsole {
 
 	public static void main(String[] args) {

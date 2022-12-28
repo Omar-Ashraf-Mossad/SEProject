@@ -1,5 +1,12 @@
+package adminPack;
+
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import discountPack.DiscountManagment;
+import refundPack.RefundsManagment;
+
+
 
 public class AdminConsole {
 

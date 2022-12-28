@@ -1,3 +1,5 @@
+package adminPack;
+
 public class Admin {
 	
 	private String adminName ;

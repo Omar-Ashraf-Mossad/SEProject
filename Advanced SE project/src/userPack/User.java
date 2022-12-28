@@ -1,3 +1,4 @@
+package userPack;
 
 public class User {
 	private String name;
@@ -45,7 +46,7 @@ public class User {
 	{
 		return email;
 	}
-	void addbalance(double b)
+	public void addbalance(double b)
 	{
 		balance = b;
 	}

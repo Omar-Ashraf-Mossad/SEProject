@@ -1,3 +1,4 @@
+package discountPack;
 
 public class OverallDiscounts {
 	private float Percent;

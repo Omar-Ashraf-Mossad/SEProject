@@ -1,4 +1,7 @@
+package discountPack;
+
 import java.util.ArrayList;
+
 
 public class Discount_Viewer {
 	

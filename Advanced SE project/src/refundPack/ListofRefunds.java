@@ -44,6 +44,9 @@ public class ListofRefunds {
     public String getEmailAtIndex(int index){
         return RefundList.get(index).getEmail();
     }
+    public int get_id(int index){
+        return RefundList.get(index).transID;
+    }
     public double getRefundAmount(int index){
         return RefundList.get(index).getAmount();
     }

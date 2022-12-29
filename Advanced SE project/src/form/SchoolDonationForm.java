@@ -1,17 +1,20 @@
 package form;
-import java.util.Scanner;
 
 public class SchoolDonationForm extends Form {
-	public void take_input(Scanner i) {
+	public void createComp() {
 		
-		takeamount = false;
-		System.out.println("Donate to a School");
-		System.out.println("-----------------------------------------");
-		System.out.print("Enter School name:>");
-		formdata.put("Number", i.nextLine());
+		name = "Donate to a School";
 		
-		System.out.print("Enter Amount to be transfered:>");
-		amount = i.nextDouble();
+		String mapkey = "name";
+		String type = "S";
+		String Message = "Enter School name:>";
+		boolean hasoptions = false;
+		
+		
+		FormComponent c = new FormComponent(mapkey, type, Message, hasoptions);
+		
+		list1.add(c);
+		
 		
 		
 		

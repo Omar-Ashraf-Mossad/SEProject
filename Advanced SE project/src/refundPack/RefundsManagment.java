@@ -1,11 +1,14 @@
 package refundPack;
 
+import transactionPack.Transaction;
+import transactionPack.TransactionList;
 import userPack.UsersList;
 
 public class RefundsManagment {
 
 
-
+	private  TransactionList TransListInstance = TransactionList.getInstance();
+	
     public void returnBalance(int indexOfRefund){//function that sends the refund amount to the correct user and picks the user by Email
         ListofRefunds RefundListInstance = ListofRefunds.getInstance();
         UsersList UserListInstance = UsersList.getInstance();
@@ -20,10 +23,19 @@ public class RefundsManagment {
     public void giveRefund(int indexOfRefund){ // both methods remove the refund request after handling
         ListofRefunds RefundListInstance = ListofRefunds.getInstance();
         this.returnBalance(indexOfRefund);
+        
+        Transaction t = TransListInstance.getbyid( RefundListInstance.get_id(indexOfRefund));
+        t.setAccepted(true);
+        t.setResponded(true);
         RefundListInstance.removeRefund(indexOfRefund);
     }
     public void removeRefund(int indexOfRefund){
-        ListofRefunds RefundListInstance = ListofRefunds.getInstance();
+    	
+    	 ListofRefunds RefundListInstance = ListofRefunds.getInstance();
+    	  Transaction t = TransListInstance.getbyid( RefundListInstance.get_id(indexOfRefund));
+          t.setAccepted(false);
+          t.setResponded(true);
+       
         RefundListInstance.removeRefund(indexOfRefund);
     }
     public boolean EmptyList(){

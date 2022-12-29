@@ -40,11 +40,13 @@ public class UserConsole {
 			Scanner credit=new Scanner(System.in);
 			Scanner transID =new Scanner(System.in);
 		    int choice = s.nextInt();
-		    
+		    s.nextLine();
 		    switch(choice)
 		    {
-		    case(1):  OperationControl control = new OperationControl();
-		    			String result = control.getSP(access.getname(),access.getmail(),access.isnew(),access);
+		    case(1):    System.out.print("Enter the searchWord <enter all if you want to get all service providers>: ");
+		    			String Search = s.nextLine();
+		    			OperationControl control = new OperationControl();
+		    			String result = control.getSP(access.getname(),access.getmail(),access.isnew(),access,Search);
 		    			
 		    			if(result != null) {
 		    				System.out.println(result);
@@ -52,7 +54,7 @@ public class UserConsole {
 		    			}
 		    				
 		    			break;
-		    case(2):System.out.println("enter the amount to be added to wallet and your credit card");
+		    case(2):System.out.println("enter the amount to be added to wallet and your credit card ");
 		    		double amo;
 		    		int cre;
 		    		amo=wall.nextDouble();
@@ -64,11 +66,9 @@ public class UserConsole {
 		    		RefundRequestControl controlObj = new RefundRequestControl();
 		    		System.out.print("Enter transaction ID : ");
 		    		int transactionID = transID.nextInt();
-		    		if(controlObj.RequestARefund(transactionID,access.getmail())) {
-		    			System.out.println("Refund request was added.");
-		    		}else {
-		    			System.out.println("Transaction wasn't found .");
-		    		}
+		    		String msg = controlObj.RequestARefund(transactionID,access.getmail());
+		    		System.out.println(msg);
+		    		
 		    		break;
 		    				
 		    case(4): Discount_Viewer dv = new Discount_Viewer();

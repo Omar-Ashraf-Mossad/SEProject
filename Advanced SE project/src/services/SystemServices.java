@@ -75,6 +75,18 @@ public class SystemServices {
 		return l;
 	}
 	
+	public ArrayList<String> get_providers(String name){
+		ArrayList<String> l = new ArrayList<String>();
+		
+		for(int i =0;i<list.size();i++)
+		{
+			ServiceProvider p = list.get(i);
+			if(p.get_name().toUpperCase().contains(name.toUpperCase()))
+				l.add(p.get_name());
+		}
+		return l;
+	}
+	
 	
 	
 }

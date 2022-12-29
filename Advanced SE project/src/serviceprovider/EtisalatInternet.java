@@ -5,7 +5,7 @@ import form.EtisalatInternetForm;
 import form.Form;
 
 public class EtisalatInternet extends ServiceProvider {
-	String name = "Etistalat internet recharge";
+	String name = "Etisalat internet recharge";
 	@Override
 	public String get_name() {
 		return name;

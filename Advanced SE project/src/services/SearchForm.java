@@ -13,8 +13,14 @@ public class SearchForm {
 
 		System.out.println(name);
 		System.out.println("--------------------------------------------------");
+		if(list.size()==0)
+		{
+			System.out.println("No Service Provider was found Matching your request");
+			return null;
+		}
 		for(int i =0;i<list.size();i++)
 		{
+			
 			System.out.println((i+1)+"-"+list.get(i));
 		}
 		System.out.println("--------------------------------------------------");

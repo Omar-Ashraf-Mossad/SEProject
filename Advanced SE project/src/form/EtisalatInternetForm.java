@@ -1,48 +1,52 @@
 package form;
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class EtisalatInternetForm extends Form {
-public void take_input(Scanner i) {
+public void createComp() {
+	
+		limited = true;
 		
-		takeamount = false;
-		System.out.println("Etisalat internet Choose Your Subscription");
-		boolean flag = true;
+		name = "Etisalat internet Choose Your Subscription";
+	
+		String mapkey = "Number";
+		String type = "I";
+		String Message = "Enter your Number:>";
+		boolean hasoptions = false;
+	
+	
+		FormComponent c = new FormComponent(mapkey, type, Message, hasoptions);
+	
+		list1.add(c);
 		
-		System.out.println("-----------------------------------------");
-		System.out.print("Enter your Number:>");
-		formdata.put("Number", i.nextLine());
-		int choice  = 0;
-		while (flag) {
-			System.out.println("-----------------------------------------");
-			System.out.println("Choose your subscription:>");
-			System.out.println("1-140 GB for 50 EGP");
-			System.out.println("2-180GB for 60EGP");
-			System.out.println("3-220 GB for 100EGP");
-			System.out.print("Enter your Number:>");
-			 choice = i.nextInt();
-			 
-			 
-			 if(choice<0 || choice >3)
-			 {
-				 System.out.println("Choose a valid number");
-			 }
-			 else
-				 flag = false;
-			
-			
-			
-		}
-		switch(choice) {
-			case(1):formdata.put("subscription", "50");
-					amount = 50;
-					break;
-			case(2):formdata.put("subscription", "60");
-					amount = 60;
-						break;
-			case(3):formdata.put("subscription", "100");
-					amount = 100;
-					break;
 		
-		}
+		
+		options_Message = "-----------\n"+"Choose your subscription:>\n"+"1-140 GB for 50 EGP\n"+"2-180GB for 60EGP\n"+"3-220 GB for 100EGP";
+		
+		
+		
+		 mapkey = "subscription";
+		 type = "I";
+		 Message = "";
+		 hasoptions = true;
+		 
+		 ArrayList<String> options = new ArrayList<String>();
+		 options.add("140");
+		 options.add("180");
+		 options.add("220");
+		 
+		 
+		 
+		 
+		FormComponent c2 = new FormComponent(mapkey, type, Message, hasoptions);
+		c2.add_options(options);
+		
+		list1.add(c2);
+		
+		
+		amount_options.add(50.0f);
+		amount_options.add(60.0f);
+		amount_options.add(100.0f);
+		
+		
 }
 }

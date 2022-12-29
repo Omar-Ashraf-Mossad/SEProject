@@ -13,7 +13,7 @@ public class DiscountManagment {
     public void specificdiscount(float Percent){
         if(Percent > 0 && Percent < 100){
             ServiceControl SC = new ServiceControl();
-            ServiceProvider s1 = SC.choose_SP();
+            ServiceProvider s1 = SC.search_SP("all");
             s1.setDiscount(Percent);
         }
         else{

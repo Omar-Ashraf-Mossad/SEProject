@@ -2,16 +2,21 @@ package form;
 import java.util.Scanner;
 
 public class EtisalatRechargeForm extends Form{
-	public void take_input(Scanner i) {
+	
+	
+	public void createComp() {
+
+		name = "Etisalat Recharge Service";
 		
-		takeamount = false;
-		System.out.println("Etisalat Recharge Service");
-		System.out.println("-----------------------------------------");
-		System.out.print("Enter your phone number:>");
-		formdata.put("Number", i.nextLine());
+		String mapkey = "Number";
+		String type = "I";
+		String Message = "Enter your phone number:>";
+		boolean hasoptions = false;
 		
-		System.out.print("Enter Amount you want to add:>");
-		amount = i.nextDouble();
+		
+		FormComponent c = new FormComponent(mapkey, type, Message, hasoptions);
+		
+		list1.add(c);
 		
 		
 		

@@ -1,19 +1,19 @@
 package form;
-import java.util.Scanner;
 
 public class MonthlyForm extends Form{
-	public void take_input(Scanner i) {
-		
-		takeamount = false;
-		System.out.println("Monthly Receipt for LandLine Add money to be used to pay your bill for the next month");
-		System.out.println("-----------------------------------------");
-		System.out.print("Enter your LandLineNumber:>");
-		formdata.put("Number", i.nextLine());
-		
-		System.out.print("Enter Amount to be transfered:>");
-		amount = i.nextDouble();
+	public void createComp() {
 		
 		
+		name = "Monthly Receipt for LandLine Add money to be used to pay your bill for the next month";
 		
+		String mapkey = "Number";
+		String type = "I";
+		String Message = "Enter your LandLineNumber:>";
+		boolean hasoptions = false;
+		
+		
+		FormComponent c = new FormComponent(mapkey, type, Message, hasoptions);
+		
+		list1.add(c);
 	}
 }

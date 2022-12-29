@@ -1,17 +1,21 @@
 package form;
-import java.util.Scanner;
 
 public class NGOForm extends Form{
-	public void take_input(Scanner i) {
+	public void createComp() {
 		
-		takeamount = false;
-		System.out.println("Donate to a non profitable organization");
-		System.out.println("-----------------------------------------");
-		System.out.print("Enter Organization name:>");
-		formdata.put("Number", i.nextLine());
 		
-		System.out.print("Enter Amount to be transfered:>");
-		amount = i.nextDouble();
+		name = "Donate to a non profitable organization";
+		
+		String mapkey = "Number";
+		String type = "I";
+		String Message = "Enter Organization name:>";
+		boolean hasoptions = false;
+		
+		
+		FormComponent c = new FormComponent(mapkey, type, Message, hasoptions);
+		
+		list1.add(c);
+		
 		
 		
 		

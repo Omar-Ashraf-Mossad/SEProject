@@ -5,7 +5,7 @@ import form.EtisalatRechargeForm;
 import form.Form;
 
 public class EtisalatRecharge extends ServiceProvider {
-	String name = "Etistalat Mobile Recharge Service";
+	String name = "Etisalat Mobile Recharge Service";
 	@Override
 	public String get_name() {
 		return name;

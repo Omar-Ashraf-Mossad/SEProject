@@ -4,6 +4,9 @@ public class Transaction {
 	private String email,SP;
 	private int id;
     private double amount;
+    private boolean sent = false;
+    private boolean responded =false;
+    private boolean accepted = false;
     
     public Transaction (String e,String sp,int i,double a){
     	email = e;
@@ -34,5 +37,23 @@ public class Transaction {
 	}
 	public void setAmount(float amount) {
 		this.amount = amount;
+	}
+	public boolean isSent() {
+		return sent;
+	}
+	public void setSent(boolean sent) {
+		this.sent = sent;
+	}
+	public boolean isAccepted() {
+		return accepted;
+	}
+	public void setAccepted(boolean accepted) {
+		this.accepted = accepted;
+	}
+	public boolean isResponded() {
+		return responded;
+	}
+	public void setResponded(boolean responded) {
+		this.responded = responded;
 	}
 }

@@ -43,7 +43,11 @@ public class TransactionList {
 			Transaction t = list.get(i);
 			
 			if(t.getId() == id)
+			{
+				
 				return t;
+			}
+				
 		}
 		return null;
 	}

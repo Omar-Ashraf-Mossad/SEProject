@@ -1,17 +1,22 @@
 package form;
-import java.util.Scanner;
 
 public class VodafoneRechargeForm extends Form {
-	public void take_input(Scanner i) {
+	
+	public void createComp() {
 		
-		takeamount = false;
-		System.out.println("Vodafone Recharge Service :     Welcome!");
-		System.out.println("-----------------------------------------");
-		System.out.print("Enter your Vodafone number:>");
-		formdata.put("Number", i.nextLine());
+		name = "Vodafone Recharge Service :     Welcome!";
 		
-		System.out.print("Enter Amount to be transfered:>");
-		amount = i.nextDouble();
+		String mapkey = "Number";
+		String type = "I";
+		String Message = "Enter your Vodafone number:>";
+		boolean hasoptions = false;
+		
+		
+		FormComponent c = new FormComponent(mapkey, type, Message, hasoptions);
+		
+		list1.add(c);
+		
+		
 		
 		
 		

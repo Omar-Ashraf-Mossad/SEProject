@@ -5,18 +5,25 @@ import serviceprovider.ServiceProvider;
 
 public class ServiceControl {
 	
-	
-
-	public ServiceProvider choose_SP()
+	public ServiceProvider search_SP(String name)
 	{
 		
 		//create new system services
 				SystemServices s1 = SystemServices.getInstance();
-				String name;
 				
 				
+				ArrayList<String> l2;
 				SearchForm f = new SearchForm();
-				ArrayList<String> l2 = s1.get_providers();
+				
+				
+				if(name.toUpperCase().equals( "ALL"))
+				{
+					 l2 = s1.get_providers();
+					 
+				}
+					
+				else
+					l2 = s1.get_providers(name);
 				
 				
 				String message2 = ":\n-----------------\nChoose the service provider you want:";
@@ -32,6 +39,9 @@ public class ServiceControl {
 				
 				return p;
 	}
+	
+	
+	
 	
 	
 }

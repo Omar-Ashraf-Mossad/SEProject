@@ -1,50 +1,53 @@
 package form;
 import java.util.Map;
-import java.util.Scanner;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 
 public abstract class Form {
 	
 	protected Map<String,String> formdata = new HashMap<String,String>();
-	boolean takeamount = true;
-	public double amount;
 	
-	public boolean start() {
+	
+	boolean limited = false;
+	boolean takeamount = true;
+	
+	protected String name;
+	
+	protected ArrayList<FormComponent> list1 = new ArrayList<FormComponent>();
+	protected ArrayList<Float> amount_options = new ArrayList<Float> ();
+	protected String options_Message;
+	
+	
+	public void start() {
 //Template Method	
 		
 		
-		Scanner i = new Scanner(System.in);
-
-		take_input(i);
-		if(takeamount) {
-			System.out.print("Enter Amount of money:>");
-			amount = i.nextDouble();
-		}
+		createComp();
 		
-		
-		
-		System.out.println("-----------------------------------------");
-		
-		System.out.println("1-Confirm payment         2-Cancel");
-		System.out.println("-----------------------------------------");
-		System.out.print(">");
-		int choice = i.nextInt();
-		
-		if(choice==1)
-			return true;
-		else
-			return false;
-	}
-	public Map<String,String> get_data()
-	{
-		return formdata;
-	}
-	public double get_amount()
-	{
-		return amount;
 	}
 	
-	abstract void take_input(Scanner i);
+	
+	abstract void createComp();
+
+
+	public ArrayList<FormComponent> getL() {
+		return list1;
+	}
+
+
+	public String getOptions_Message() {
+		return options_Message;
+	}
+
+
+	public ArrayList<Float> getAmount_options() {
+		return amount_options;
+	}
+
+
+	public String getName() {
+		return name;
+	}
 	
 }

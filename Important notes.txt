@@ -1,0 +1,29 @@
+To Run the project:
+
+1-import the project to eclipse EE as an existing maven project.
+2- make sure that port 8080 is not taken or else change the port value in the properties of the project by :
+	1- go to src folder.
+	2- go to main folder then go to a folder named resources.
+	3- inside resources folder you will find a file named application.properties open it and change the value of a text named server.port to a port number that is free in your machine.
+3-run the project as a java application.
+4-it will start and run the server and you can use the postman to send requests to the server using the specified portnumber.
+
+
+in postman import our collection using this link NOTE: that the keys in the urls are old keys you have to sign up a user and login him to get a new key
+replace the old keys in any user service with a key you get when login a specifc user also note each user you login has a key you can request 
+any service to any user using their key
+
+https://api.postman.com/collections/25120965-e91f3c4b-6521-4f26-a72d-f356b822f3e8?access_key=PMAT-01GNPNBMV178ZBHEJZ4RS1F81C
+-------------------------------------------------------------------------------------------------------------------------------------
+This project is built using springboot .jar meaning you don't have to install tomcat in your eclipse the project already contains tomcat application server
+
+also this project depends on java 17
+
+also note the postman collection json attached in the word file is part of the full result we added the full result with the project in githb
+
+table api starts at page 50in the word file
+
+
+also in the api table in the document there are notes onhow to interact with some apis because some sevices requires a previous services
+to be performed and also some services require a specific input key names and these names can only be known as a return of another api service.
+
